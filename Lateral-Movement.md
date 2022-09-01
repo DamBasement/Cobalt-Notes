@@ -7,7 +7,6 @@ Don't forget to test local admin access on a target `listing the C$ share` remot
   - The syntax is jump [method] [target] [listener]
   - Type `jump` to see a list of methods
   ```
-  -------           ----  -----------
   psexec            x86   Use a service to run a Service EXE artifact
   psexec64          x64   Use a service to run a Service EXE artifact
   psexec_psh        x86   Use a service to run a PowerShell one-liner
