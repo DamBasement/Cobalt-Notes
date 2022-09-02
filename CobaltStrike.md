@@ -17,7 +17,7 @@ with the CobaltStrike client to allow the connection
 CobaltStrike client Dashboard runs on winzoz server, can be started just clicking on the icon
 It will ask for IP, port and pass we set on the server
 
-#CobaltStrike usage
+# CobaltStrike usage
 It is so important the `listener` view available in the `CobaltStrike` menu and
 the running `Web Delivery` available on `attack -> WebDrive-by -> Manage` that
 will show a list of listening Web Delivery
