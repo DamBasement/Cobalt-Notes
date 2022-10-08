@@ -7,11 +7,41 @@ Two main components
 CobaltStrike server runs on linux machine, it can be started from folder `/opt/CobaltStrike/`
 running the following command:
 ```
-./teamserver 10.10.5.120 Passw0rd!
+sudo ./teamserver 10.10.5.50 Passw0rd! c2-profiles/normal/webbug.profile
 ```
 
 where the IP is the linux machine IP where you want to listen to and the password will be used
 with the CobaltStrike client to allow the connection
+### Run as a Service
+```
+attacker@ubuntu ~> sudo vim /etc/systemd/system/teamserver.service
+```
+Then copy the following into that file
+```
+[Unit]
+Description=Cobalt Strike Team Server
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=root
+WorkingDirectory=/home/attacker/cobaltstrike
+ExecStart=/home/attacker/cobaltstrike/teamserver 10.10.5.50 Passw0rd! c2-profiles/normal/webbug.profile
+
+[Install]
+WantedBy=multi-user.target
+```
+type
+```
+sudo systemctl daemon-reload
+```
+and finally
+```
+sudo systemctl enable --now teamserver.service 
+```
 
 ## Dashboard
 CobaltStrike client Dashboard runs on winzoz server, can be started just clicking on the icon
