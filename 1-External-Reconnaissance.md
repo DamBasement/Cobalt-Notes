@@ -15,6 +15,11 @@ $ whois 104.21.90.222
 ```
 ## DNSSCAN
 Subdomains can also provide insight to other publicly available services, which could include webmail, remote access solutions such as Citrix, or a VPN.
+Tools such as dnscan come with lists of popular subdomains.
+```
+./dnscan.py -d cyberbotic.io -w subdomains-100.txt
+```
+
 ## SPOOFCHECK
 Weak email security (SPF, DMARC and DKIM) may allow us to spoof emails. [Spoofcheck](https://github.com/BishopFox/spoofcheck) is a Python tool that can verify the email security of a given domain.
 ```
