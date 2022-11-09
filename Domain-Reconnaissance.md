@@ -68,14 +68,18 @@ powershell Get-DomainGroup -Identity "Domain Admins" -Domain cyberbotic.io -Prop
 - :triangular_flag_on_post: Get Domain SID
 ```
 powershell Get-DomainSID
+```
+- :triangular_flag_on_post: Get Member Name by converting its SID
+```
+powershell ConvertFrom-SID S-1-5-21-569305411-121244042-2357301523-1120
+```
+- :triangular_flag_on_post: Get domain admin in the specified Domain
+```
+powershell Get-DomainGroupMember -Identity "Domain Admins" -Domain cyberbotic.io | select MemberName
 ``` 
 - Get Domain Controller
 ```
 powershell Get-DomainController | select Forest, Name, OSVersion | fl
-``` 
-- :triangular_flag_on_post: Get domain admin in the specified Domain
-```
-powershell Get-DomainGroupMember -Identity "Domain Admins" -Domain cyberbotic.io | select MemberName
 ``` 
 - Get foreign domain across the trust.
 ```
@@ -85,7 +89,4 @@ powershell Get-DomainComputer -Domain dev-studio.com -Properties DnsHostName
 ```
 powershell Get-DomainForeignGroupMember -Domain dev-studio.com
 ``` 
-- Get Member Name by converting its SID
-```
-powershell ConvertFrom-SID S-1-5-21-569305411-121244042-2357301523-1120
-``` 
+
