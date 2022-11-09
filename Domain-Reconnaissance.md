@@ -57,15 +57,15 @@ powershell Get-DomainGroupMember -Identity "Domain Admins"
 ```
 powershell Get-DomainTrust
 ```
-- Get SID of a user :triangular_flag_on_post:
+- :triangular_flag_on_post: Get SID of a user 
 ```
 powershell Get-DomainUser -Identity <username> -Properties objectsid
 ```
-- Get SID of a target group :triangular_flag_on_post:
+- :triangular_flag_on_post: Get SID of a target group
 ```
 powershell Get-DomainGroup -Identity "Domain Admins" -Domain cyberbotic.io -Properties ObjectSid
 ``` 
-- Get Domain SID :triangular_flag_on_post:
+- :triangular_flag_on_post: Get Domain SID
 ```
 powershell Get-DomainSID
 ``` 
@@ -73,7 +73,7 @@ powershell Get-DomainSID
 ```
 powershell Get-DomainController | select Forest, Name, OSVersion | fl
 ``` 
-- Get domain admin in the specified Domain
+- :triangular_flag_on_post: Get domain admin in the specified Domain
 ```
 powershell Get-DomainGroupMember -Identity "Domain Admins" -Domain cyberbotic.io | select MemberName
 ``` 
