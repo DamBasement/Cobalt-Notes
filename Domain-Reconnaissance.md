@@ -57,6 +57,10 @@ powershell Get-DomainGroupMember -Identity "Domain Admins"
 ```
 powershell Get-DomainTrust
 ```
+- Get SID of a user
+```
+powershell Get-DomainUser -Identity <username> -Properties objectsid
+```
 - Get SID of a target group
 ```
 powershell Get-DomainGroup -Identity "Domain Admins" -Domain cyberbotic.io -Properties ObjectSid
