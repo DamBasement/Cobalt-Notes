@@ -1,5 +1,5 @@
 # Use PowerView, but before.. import it! 
-```Import powershell-import C:\Tools\PowerSploit\Recon\PowerView.ps1```
+```powershell-import C:\Tools\PowerSploit\Recon\PowerView.ps1```
 
 - Get the Domain
 ```
