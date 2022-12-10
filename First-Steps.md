@@ -155,7 +155,15 @@ Running the team server as a service allows it to start automatically when the V
         set spawnto_x86 "%windir%\\syswow64\\dllhost.exe";
   }
   ```
-  
-  
+## 4) AppLocker
+Known colloquially as LOLBAS, these are executables and scripts that come as part of Windows but allow for arbitrary code execution.  They allow us to bypass AppLocker, because they're allowed to execute under the normal allow criteria - they exist in trusted paths (C:\Windows and C:\Program Files) and may also be digitally signed by Microsoft.
+If you can find an AppLocker bypass to execute arbitrary code, you can also break out of PowerShell Constrained Language Mode by using an unmanaged   PowerShell runspace.  If you have a Beacon running on a target, this is just what powerpick does.
+```
+beacon> powershell $ExecutionContext.SessionState.LanguageMode
+ConstrainedLanguage
+
+beacon> powerpick $ExecutionContext.SessionState.LanguageMode
+FullLanguage
+```
   
   
