@@ -26,7 +26,7 @@ The rev port forward require to open the port on the firewall and only SYSTEM us
 
 Starting from being the simple user, create a **pivot listner**. Just use a port you are sure is not already used and leave all the rest as it is.
 When you'll encode the payload that need to be linked to the pivot listner just created, you'll need to change the port to 8080 and the IP should be the one of the workstation. (wkstn-2 in our case)
-As System we'll need do the reverse port forward with ```rportfwd 8080 127.0.0.1 80``` and create the right rule in the firewall ```powershell New-NetFirewallRule -DisplayName "Test Rule" -Profile Domain -Direction Inbound -Action Allow -Protocol TCP -LocalPort 8080```
+**As Simple User** we'll need do the reverse port forward with ```rportfwd 8080 127.0.0.1 80``` and **as SYSTEM** to create the right rule in the firewall ```powershell New-NetFirewallRule -DisplayName "Test Rule" -Profile Domain -Direction Inbound -Action Allow -Protocol TCP -LocalPort 8080```
 
 This will spawn a beacon on the SQL system. 
 
