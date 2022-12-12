@@ -17,7 +17,7 @@ Get more information about the instance
 
 There are several options for issuing queries against a SQL instance.  
 - Get-SQLQuery from PowerUpSQL ```powershell Get-SQLQuery -Instance "sql-2.dev.cyberbotic.io,1433" -Query "select @@servername"```
-- Using msqlclient.py. For this you will need to use proxichain and start SOCKS on the beacon
+- Using msqlclient.py. For this you will need to use proxichain and start SOCKS on the beacon **as SYSTEM**
 - Windows GUI for sql via proxifier.
 
 The idea here is to move from the workstation you exploited to an SQL instance. You should be both simple user and a SYSTEM user in order to be able to apply firewall rules.
