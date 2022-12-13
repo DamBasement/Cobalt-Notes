@@ -1,6 +1,10 @@
 # Use PowerView, but before.. import it! 
 ```powershell-import C:\Tools\PowerSploit\Recon\PowerView.ps1```
 
+- Writeable software share 
+```
+powershell Find-DomainShare -CheckShareAccess
+```
 - Get the Domain
 ```
 powershell Get-Domain
